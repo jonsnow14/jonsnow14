@@ -25,16 +25,7 @@ Five years building applied ML and LLM systems across manufacturing, supply chai
 
 <img src="assets/live-dot.gif" width="13" height="13" alt="live" /> **[ClinAssistIndia](https://github.com/jonsnow14/clinassitInda)** — PHC case workspace (POC, rural India). A Hinglish / Hindi / English note becomes an ICMR-grounded clinical card: urgency, ICD-10, PHC-feasible steps, referral. RAG over official ICMR Standard Treatment Workflows (Chroma MiniLM → Sarvam-105B). Human-triggered ops for beds, ambulance, pharmacy, expert, SOS. Silent FHIR R4 bundles on disk. Decision support only — treating judgment stays with the clinician.
 
----
-
-## Selected work
-
-| Project | What it is | Links |
-| --- | --- | --- |
-| **Enterprise Knowledge Assistant** | Agent-free Azure RAG over HR / Finance / IT / Legal / Sales policy. Hybrid BM25 + vector search, fail-closed ACL filters, evidence gate, citation allowlist. ~40-case golden set on Azure AI Foundry: groundedness **~4.6/5**, relevance **~4.5/5**, `citation_ok` **1.0**. | [repo](https://github.com/jonsnow14/rag-based-enterprise-knowledge-assistant) · [live](https://northwind-rag-azure.azurewebsites.net) |
-| **ClinAssistIndia** | ICMR-grounded PHC workspace: clinical card + beds / ambulance / pharmacy / SOS agents. Next.js + FastAPI + Sarvam. | [repo](https://github.com/jonsnow14/clinassitInda) |
-| **Local private RAG** | Conversational Q&A over your PDFs with Ollama, LangChain, ChromaDB, HuggingFace. No API keys. Nothing leaves the machine. | [repo](https://github.com/jonsnow14/local-private-RAG-pipeline) |
-| **EvalAI @ Justuju** | Handwritten flowcharts → executable Python (and code → Mermaid). CrewAI multi-agent RAG that drafts high-school Math/Physics tests. File-level Gemini token and cost telemetry. | [justuju.in](https://justuju.in) |
+<img src="assets/live-dot.gif" width="13" height="13" alt="live" /> **[Enterprise Knowledge Assistant](https://github.com/jonsnow14/rag-based-enterprise-knowledge-assistant)** — Agent-free Azure RAG over HR / Finance / IT / Legal / Sales policy. Hybrid BM25 + vector search, fail-closed ACL filters, evidence gate, citation allowlist. ~40-case golden set on Azure AI Foundry: groundedness **~4.6/5**, relevance **~4.5/5**, `citation_ok` **1.0**. [Live demo](https://northwind-rag-azure.azurewebsites.net).
 
 ---
 
@@ -48,7 +39,7 @@ Shipped for **Mahindra**, **Flexera**, **Dorman**, and **Corning**. Intern → A
 | Mahindra plants | Computer-vision sealant-fault detector on poor-quality line images | VAPT reported **~90%** increase in fault detection without stopping the line. Recognized by the VP, Mahindra Emerging Tech Division, Mumbai |
 | Flexera / Dorman | Time-series license-demand and units-sold forecasts (holidays, attrition, sparse history, overlapping seasonality, concept drift) | Production forecasts on non-stationary demand |
 | Mahindra shop floor + tenders | Real-time YOLO proximity alerts; Azure Custom Vision ANPR retrained for graffiti, occlusion, and degraded Indian plates; Azure OCR (Read API) + clause-level tender diffs on App Service | Live CV + document-integrity review |
-| [Justuju](https://justuju.in) · EvalAI | Automated evaluation of student submissions (flowcharts → code, code → Mermaid, Math/Physics tests). Replaced a junior team of 7–8 doing this by hand | **~50–60** submissions/day → **~1,000** submissions/day |
+| [justuju.in](https://justuju.in) · EvalAI | Automated evaluation of student submissions (flowcharts → code, code → Mermaid, Math/Physics tests). Replaced a junior team of 7–8 doing this by hand | **~50–60** submissions/day → **~1,000** submissions/day |
 
 ---
 
@@ -57,7 +48,7 @@ Shipped for **Mahindra**, **Flexera**, **Dorman**, and **Corning**. Intern → A
 | Role | Where | When | One-liner |
 | --- | --- | --- | --- |
 | AI Engineer | [Manaswi](https://manaswi.fly.dev/) · [ClinAssistIndia](https://github.com/jonsnow14/clinassitInda) | Apr 2026 – Present | Independent product work: Sarvam-105B co-learner and ICMR-grounded PHC workspace |
-| AI Engineer | [Justuju](https://justuju.in) | Jan 2025 – Mar 2026 | AI consultant and SME; EvalAI for ed-tech assessments |
+| AI Engineer | [justuju.in](https://justuju.in) | Jan 2025 – Mar 2026 | AI consultant and SME; EvalAI for ed-tech assessments |
 | Career break | — | Oct 2023 – Oct 2024 | Family and travel; ICPC India AI plagiarism-checker POC |
 | Data Scientist | Bristlecone | Jan 2020 – Oct 2023 | Intern → Associate DS → DS; NLP, CV, and forecasting for Mahindra, Flexera, Dorman, Corning |
 
