@@ -39,7 +39,7 @@ Shipped for **Mahindra**, **Flexera**, **Dorman**, and **Corning**. Intern → A
 | Mahindra plants | Computer-vision sealant-fault detector on poor-quality line images | VAPT reported **~90%** increase in fault detection without stopping the line. Recognized by the VP, Mahindra Emerging Tech Division, Mumbai |
 | Flexera / Dorman | Time-series license-demand and units-sold forecasts (holidays, attrition, sparse history, overlapping seasonality, concept drift) | Production forecasts on non-stationary demand |
 | Mahindra shop floor + tenders | Real-time YOLO proximity alerts; Azure Custom Vision ANPR retrained for graffiti, occlusion, and degraded Indian plates; Azure OCR (Read API) + clause-level tender diffs on App Service | Live CV + document-integrity review |
-| [justuju.in](https://justuju.in) · EvalAI | Automated evaluation of student submissions (flowcharts → code, code → Mermaid, Math/Physics tests). Replaced a junior team of 7–8 doing this by hand | **~50–60** submissions/day → **~1,000** submissions/day |
+| [justuju.in](https://justuju.in) · EvalAI | Automated evaluation of student submissions (flowcharts → code, code → Mermaid, Math/Physics tests). The same junior team of 7–8 used the tool instead of grading by hand | **~50–60** submissions/day manually → **~1,000**/day with the tool |
 
 ---
 
