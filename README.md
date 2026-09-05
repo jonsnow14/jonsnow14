@@ -13,8 +13,6 @@
 
 Five years building applied ML and LLM systems across manufacturing, supply chain, healthcare, and education. I ship RAG and agent products — hybrid retrieval, fail-closed ACLs, citation grounding, eval harnesses — on Azure. Production computer-vision and time-series models I built are used by **Mahindra**, **Flexera**, and **Dorman**.
 
-> smart when confident · classic when not · measurable always · killable instantly
-
 ---
 
 ## Now
