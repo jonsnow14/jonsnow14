@@ -56,7 +56,14 @@ def capsule(draw: ImageDraw.ImageDraw, x0: float, y0: float, x1: float, y1: floa
     draw.rectangle([x0 + r, y0, x1 - r, y1], fill=fill)
 
 
-def draw_badge(w: int, h: int, beat: float, font: ImageFont.FreeTypeFont) -> Image.Image:
+def draw_badge(
+    w: int,
+    h: int,
+    beat: float,
+    font: ImageFont.FreeTypeFont,
+    text: str,
+    text_x_ratio: float = 0.36,
+) -> Image.Image:
     img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     fill = GREEN_HI if beat > 0.45 else GREEN
@@ -66,10 +73,9 @@ def draw_badge(w: int, h: int, beat: float, font: ImageFont.FreeTypeFont) -> Ima
     orb = draw_orb(int(h * 0.72), beat)
     img.alpha_composite(orb, (int(h * 0.12), (h - orb.size[1]) // 2))
 
-    text = "LIVE"
     bbox = d.textbbox((0, 0), text, font=font)
-    tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
-    tx = int(w * 0.36)
+    th = bbox[3] - bbox[1]
+    tx = int(w * text_x_ratio)
     ty = (h - th) // 2 - bbox[1]
     d.text((tx, ty), text, font=font, fill=WHITE)
     return binarize(img, cut=80)
@@ -132,13 +138,18 @@ def main() -> None:
     save_transparent_gif(orbs, OUT / "live-dot.gif", duration)
 
     font = ImageFont.truetype(FONT, 26)
-    badges = [draw_badge(176, 56, heartbeat(i / n), font) for i in range(n)]
+    badges = [draw_badge(176, 56, heartbeat(i / n), font, "LIVE") for i in range(n)]
     save_transparent_gif(badges, OUT / "live-badge.gif", duration)
 
-    write_svg_orb(OUT / "live-dot.svg")
+    present_font = ImageFont.truetype(FONT, 22)
+    present = [
+        draw_badge(420, 56, heartbeat(i / n), present_font, "doing at present", 0.22)
+        for i in range(n)
+    ]
+    save_transparent_gif(present, OUT / "present-badge.gif", duration)
 
     print("frames", n)
-    for p in (OUT / "live-dot.gif", OUT / "live-badge.gif", OUT / "live-dot.svg"):
+    for p in (OUT / "live-dot.gif", OUT / "live-badge.gif", OUT / "present-badge.gif"):
         print("wrote", p, p.stat().st_size)
 
 
