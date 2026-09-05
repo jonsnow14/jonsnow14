@@ -15,11 +15,15 @@ Five years building applied ML and LLM systems across manufacturing, supply chai
 
 ---
 
-## Now
+<h2>
+  <img src="assets/live-dot.gif" width="18" height="18" alt="live" />
+  Now
+  <img src="assets/live-badge.gif" height="20" alt="LIVE" />
+</h2>
 
-**[Manaswi](https://manaswi.fly.dev/)** — AI co-learner and teacher assistant on Sarvam-105B. Mock interviews, Feynman-style concept checks, plagiarism review, assignment/test design, classroom translation, and progress tracking.
+<img src="assets/live-dot.gif" width="13" height="13" alt="live" /> **[Manaswi](https://manaswi.fly.dev/)** — AI co-learner and teacher assistant on Sarvam-105B. Mock interviews, Feynman-style concept checks, plagiarism review, assignment/test design, classroom translation, and progress tracking.
 
-**[ClinAssistIndia](https://github.com/jonsnow14/clinassitInda)** — PHC case workspace (POC, rural India). A Hinglish / Hindi / English note becomes an ICMR-grounded clinical card: urgency, ICD-10, PHC-feasible steps, referral. RAG over official ICMR Standard Treatment Workflows (Chroma MiniLM → Sarvam-105B). Human-triggered ops for beds, ambulance, pharmacy, expert, SOS. Silent FHIR R4 bundles on disk. Decision support only — treating judgment stays with the clinician.
+<img src="assets/live-dot.gif" width="13" height="13" alt="live" /> **[ClinAssistIndia](https://github.com/jonsnow14/clinassitInda)** — PHC case workspace (POC, rural India). A Hinglish / Hindi / English note becomes an ICMR-grounded clinical card: urgency, ICD-10, PHC-feasible steps, referral. RAG over official ICMR Standard Treatment Workflows (Chroma MiniLM → Sarvam-105B). Human-triggered ops for beds, ambulance, pharmacy, expert, SOS. Silent FHIR R4 bundles on disk. Decision support only — treating judgment stays with the clinician.
 
 ---
 
