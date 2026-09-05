@@ -27,6 +27,35 @@ Five years building applied ML and LLM systems across manufacturing, supply chai
 
 ---
 
+## Work experience
+
+**AI Engineer** · [Manaswi](https://manaswi.fly.dev/) · [ClinAssistIndia](https://github.com/jonsnow14/clinassitInda) · Remote · independent product work  
+*April 2026 – Present*
+
+- **Manaswi:** AI co-learner and teacher assistant — mock interviews, Feynman-style concept checks, plagiarism review, assignment/test design, classroom translation, and progress tracking. Built on Sarvam-105B.
+- **ClinAssistIndia** (POC, rural PHCs): Hinglish / Hindi / English note → ICMR-grounded clinical card (urgency, ICD-10, feasible steps, referral). RAG over ICMR PDFs (Chroma MiniLM → Sarvam-105B). FHIR R4 bundles on disk; ops agents for beds, ambulance, pharmacy, SOS.
+
+**AI Engineer** · [Justuju](https://justuju.in) · AI consultant and SME for a junior team on ed-tech products  
+*January 2025 – March 2026*
+
+- **EvalAI:** handwritten flowcharts → executable Python (and code → Mermaid); CrewAI multi-agent RAG engine for high-school Math/Physics assessments. File-level Gemini token telemetry so cost is visible per file, not only as console aggregates.
+
+**Career break**  
+*October 2023 – October 2024*
+
+Family responsibilities and travel. Oct–Dec 2024: volunteer with ICPC India on an AI plagiarism-checker POC for code submissions.
+
+**Data Scientist** · Bristlecone · Intern → Associate Data Scientist → Data Scientist  
+*January 2020 – October 2023*  
+Mahindra, Flexera, Dorman, Corning
+
+- Owned an NLP retrieval system that extracted root causes from English mechanical-failure writeups at Mahindra Research Valley, Chennai. **~60%** average reduction in ORC closing time. Out-of-cycle promotion for this work.
+- Computer-vision sealant-fault detector for Mahindra plants (poor-quality images). VAPT reported **~90%** increase in fault detection without stopping the line. Recognized by the VP, Mahindra Emerging Tech Division, Mumbai.
+- Time-series license-demand forecast for Flexera (holidays, attrition, sparse history, overlapping seasonality) and units-sold forecast for Dorman with concept drift on non-stationary data.
+- Real-time YOLO proximity alerts on Mahindra plant floors. Azure Custom Vision ANPR retrained for graffiti, occlusion, and degraded Indian plates. Tender-document integrity: Azure OCR (Read API) + clause-level diff, reviewed on Azure App Service.
+
+---
+
 ## Selected work
 
 | Project | What it is | Links |
@@ -35,19 +64,6 @@ Five years building applied ML and LLM systems across manufacturing, supply chai
 | **ClinAssistIndia** | ICMR-grounded PHC workspace: clinical card + beds / ambulance / pharmacy / SOS agents. Next.js + FastAPI + Sarvam. | [repo](https://github.com/jonsnow14/clinassitInda) |
 | **Local private RAG** | Conversational Q&A over your PDFs with Ollama, LangChain, ChromaDB, HuggingFace. No API keys. Nothing leaves the machine. | [repo](https://github.com/jonsnow14/local-private-RAG-pipeline) |
 | **EvalAI @ Justuju** | Handwritten flowcharts → executable Python (and code → Mermaid). CrewAI multi-agent RAG that drafts high-school Math/Physics tests. File-level Gemini token and cost telemetry. | [justuju.in](https://justuju.in) |
-
----
-
-## Impact (Bristlecone, 2020–2023)
-
-Shipped for **Mahindra**, **Flexera**, **Dorman**, and **Corning**. Intern → Associate Data Scientist → Data Scientist. Out-of-cycle promotion for the Mahindra NLP work.
-
-| Client | What shipped | Result |
-| --- | --- | --- |
-| Mahindra Research Valley, Chennai | NLP retrieval that extracted root causes from English mechanical-failure writeups | **~60%** average reduction in ORC closing time |
-| Mahindra plants | Computer-vision sealant-fault detector on poor-quality line images | VAPT reported **~90%** increase in fault detection without stopping the line. Recognized by the VP, Mahindra Emerging Tech Division, Mumbai |
-| Flexera / Dorman | Time-series license-demand and units-sold forecasts (holidays, attrition, sparse history, overlapping seasonality, concept drift) | Production forecasts on non-stationary demand |
-| Mahindra shop floor + tenders | Real-time YOLO proximity alerts; Azure Custom Vision ANPR retrained for graffiti, occlusion, and degraded Indian plates; Azure OCR (Read API) + clause-level tender diffs on App Service | Live CV + document-integrity review |
 
 ---
 
