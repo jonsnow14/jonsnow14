@@ -21,11 +21,11 @@ Five years building applied ML and LLM systems across manufacturing, supply chai
   <img src="assets/live-badge.gif" height="20" alt="LIVE" />
 </h2>
 
-<img src="assets/live-dot.gif" width="13" height="13" alt="live" /> **[Manaswi](https://manaswi.fly.dev/)** — AI co-learner and teacher assistant. Mock interviews, Feynman-style concept checks, plagiarism review, assignment/test design, classroom translation, and progress tracking.
+<img src="assets/live-dot.gif" width="13" height="13" alt="live" /> **[Manaswi](https://manaswi.fly.dev/)** — AI co-learner and teacher assistant. Mock interviews, Feynman-style concept checks, assignment/test design, classroom translation, and progress tracking. Plagiarism review is a class-local lexical detector, not a web-scale “% copied” score: word 5-grams, containment (not Jaccard), and an adaptive window `W(n) = clamp(floor(n/3), 30, 100)` with a higher match bar on short CBSE answers. Scoring is closed-form (no HTTP in the scorer); Sarvam-105B only narrates spans already found. Evidence for the teacher, not a verdict. [How it works](https://www.linkedin.com/pulse/how-manaswi-detects-plagiarism-part-ii-mathematics-limits-kumar-lipvc/)
 
 <img src="assets/live-dot.gif" width="13" height="13" alt="live" /> **[ClinAssistIndia](https://github.com/jonsnow14/clinassitInda)** — PHC case workspace (POC, rural India). A Hinglish / Hindi / English note becomes an ICMR-grounded clinical card: urgency, ICD-10, PHC-feasible steps, referral. RAG over official ICMR Standard Treatment Workflows (Chroma MiniLM → Sarvam-105B). Human-triggered ops for beds, ambulance, pharmacy, expert, SOS. Silent FHIR R4 bundles on disk. Decision support only — treating judgment stays with the clinician.
 
-<img src="assets/live-dot.gif" width="13" height="13" alt="live" /> **[Enterprise Knowledge Assistant](https://github.com/jonsnow14/rag-based-enterprise-knowledge-assistant)** — Agent-free Azure RAG over HR / Finance / IT / Legal / Sales policy. Hybrid BM25 + vector search, fail-closed ACL filters, evidence gate, citation allowlist. ~40-case golden set on Azure AI Foundry: groundedness **~4.6/5**, relevance **~4.5/5**, `citation_ok` **1.0**. [Live demo](https://northwind-rag-azure.azurewebsites.net).
+<img src="assets/live-dot.gif" width="13" height="13" alt="live" /> **[Enterprise Knowledge Assistant](https://github.com/jonsnow14/rag-based-enterprise-knowledge-assistant)** — Agent-free Azure RAG over HR / Finance / IT / Legal / Sales policy. Hybrid BM25 + vector search, fail-closed ACL filters, evidence gate, citation allowlist. ~40-case golden set on Azure AI Foundry: groundedness **~4.6/5**, relevance **~4.5/5**, `citation_ok` **1.0**. [Live demo](https://northwind-rag-azure.azurewebsites.net). Ingest is structure-first, then length: split on policy headings and Excel sheets, then `C(n) = clamp(floor(n/α), 128, 512)`. On the live Northwind pack (112 chunks / 11 files) the proportional band is empty — what shipped is one heading, one chunk, plus atomic sheets. Length-adaptive windows are implemented for longer sections; they did not produce this index. [Write-up](https://www.linkedin.com/pulse/structure-first-adaptive-chunking-enterprise-rag-part-vishal-kumar-1yljc/)
 
 ---
 
@@ -35,6 +35,8 @@ Shipped for **Mahindra**, **Flexera**, **Dorman**, and **Corning**. Intern → A
 
 | Client | What shipped | Result |
 | --- | --- | --- |
+| [Manaswi](https://manaswi.fly.dev/) · plagiarism | Class-local 5-gram detector with length-adaptive windows and τ. Stylometry is a side channel and cannot move the risk band. LLM explains; it does not score. | Labelled synthetic CBSE physics (200 + 500): verbatim **1.00**, near-verbatim **0.99**; paraphrase miss by design; independent overlap **~0.3–0.6**. [Part II](https://www.linkedin.com/pulse/how-manaswi-detects-plagiarism-part-ii-mathematics-limits-kumar-lipvc/) |
+| Enterprise Knowledge Assistant · ingest | Structure-first policy chunker: do not merge short headings to fill 512 tokens; keep sheets whole; prefix vectors, leave BM25 unprefixed. `C(n)` is implemented. | **112** chunks from 11 files (98 section / 4 sheet / 10 window). Length-adaptive band unused on this short pack. [Part I](https://www.linkedin.com/pulse/structure-first-adaptive-chunking-enterprise-rag-part-vishal-kumar-1yljc/) |
 | Mahindra Research Valley, Chennai | NLP retrieval that extracted root causes from English mechanical-failure writeups | **~60%** average reduction in ORC closing time |
 | Mahindra plants | Computer-vision sealant-fault detector on poor-quality line images | VAPT reported **~90%** increase in fault detection without stopping the line. Recognized by the VP, Mahindra Emerging Tech Division, Mumbai |
 | Flexera / Dorman | Time-series license-demand and units-sold forecasts (holidays, attrition, sparse history, overlapping seasonality, concept drift) | Production forecasts on non-stationary demand |
@@ -79,6 +81,8 @@ Shipped for **Mahindra**, **Flexera**, **Dorman**, and **Corning**. Intern → A
 
 Writing down how the pieces actually work:
 
+- [How Manaswi detects plagiarism — Part II](https://www.linkedin.com/pulse/how-manaswi-detects-plagiarism-part-ii-mathematics-limits-kumar-lipvc/) — adaptive windows, containment, measured limits
+- [Structure-first adaptive chunking — Part I](https://www.linkedin.com/pulse/structure-first-adaptive-chunking-enterprise-rag-part-vishal-kumar-1yljc/) — what shipped on the 112-chunk Northwind index vs what is still Phase II
 - [How RAG Works: Part I](https://jonsnow14.github.io/ai/rag/deep-dive/2026/06/18/how-rag-works-part1.html) — why a plain LLM falls short, and how retrieval before generation fixes it
 - [How Agentic RAG Works: Part I](https://jonsnow14.github.io/ai/rag/agents/deep-dive/2026/06/18/agentic-rag-part1.html) — from single-pass retrieval to self-correcting agents
 - [How Claude CLI Works: Part I](https://jonsnow14.github.io/ai/cli/deep-dive/2026/06/17/how-claude-cli-works-part1.html) — sessions, context, memory limits, and where a coding agent can be attacked
