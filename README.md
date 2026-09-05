@@ -47,7 +47,7 @@ Shipped for **Mahindra**, **Flexera**, **Dorman**, and **Corning**. Intern → A
 
 | Role | Where | When | One-liner |
 | --- | --- | --- | --- |
-| AI Engineer | [Manaswi](https://manaswi.fly.dev/) · [ClinAssistIndia](https://github.com/jonsnow14/clinassitInda) | Apr 2026 – Present | Independent product work: Sarvam-105B co-learner and ICMR-grounded PHC workspace |
+| <img src="assets/live-dot.gif" width="13" height="13" alt="live" /> AI Engineer and Creator <img src="assets/live-badge.gif" height="16" alt="LIVE" /> | [Manaswi](https://manaswi.fly.dev/) · [ClinAssistIndia](https://github.com/jonsnow14/clinassitInda) | Apr 2026 – Present | Independent product work: Sarvam-105B co-learner and ICMR-grounded PHC workspace |
 | AI Engineer | [justuju.in](https://justuju.in) | Jan 2025 – Mar 2026 | AI consultant and SME; EvalAI for ed-tech assessments |
 | Career break | — | Oct 2023 – Oct 2024 | Family and travel; ICPC India AI plagiarism-checker POC |
 | Data Scientist | Bristlecone | Jan 2020 – Oct 2023 | Intern → Associate DS → DS; NLP, CV, and forecasting for Mahindra, Flexera, Dorman, Corning |
