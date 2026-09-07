@@ -17,7 +17,7 @@ Five years building applied ML and LLM systems across manufacturing, supply chai
 
 <h2>
   <img src="assets/live-dot.gif" width="18" height="18" alt="live" />
-  Now
+  working currently
   <img src="assets/live-badge.gif" height="20" alt="LIVE" />
 </h2>
 
