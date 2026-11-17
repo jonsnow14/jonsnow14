@@ -41,7 +41,7 @@ Shipped for **Mahindra**, **Flexera**, **Dorman**, and **Corning**. Intern → A
 
 | Client | What shipped | Result |
 | --- | --- | --- |
-| [Manaswi](https://manaswi.fly.dev/) · plagiarism | Class-local 5-gram detector with length-adaptive windows and τ. Stylometry is a side channel and cannot move the risk band. LLM explains; it does not score. | Labelled synthetic CBSE physics (200 + 500): verbatim **1.00**, near-verbatim **0.99**; paraphrase miss by design; independent overlap **~0.3–0.6**. [Part II](https://www.linkedin.com/pulse/how-manaswi-detects-plagiarism-part-ii-mathematics-limits-kumar-lipvc/) |
+| [Manaswi](https://manaswi.fly.dev/) · plagiarism-checker | Class-local 5-gram detector with length-adaptive windows and τ. Stylometry is a side channel and cannot move the risk band. LLM explains; it does not score. | Labelled synthetic CBSE physics (200 + 500): verbatim **1.00**, near-verbatim **0.99**; paraphrase miss by design; independent overlap **~0.3–0.6**. [Part II](https://www.linkedin.com/pulse/how-manaswi-detects-plagiarism-part-ii-mathematics-limits-kumar-lipvc/) |
 | [ClinAssistIndia](https://clinassitindia.org/) · LatentForce Build Sprint | ICMR-grounded PHC case workspace: Hinglish / Hindi / English note → clinical card (urgency, ICD-10, PHC-feasible steps, referral). RAG over official ICMR STWs. | **3rd place**, 48-hour Build Sprint 2026 (28–30 Aug) |
 | Enterprise Knowledge Assistant · ingest | Structure-first policy chunker: do not merge short headings to fill 512 tokens; keep sheets whole; prefix vectors, leave BM25 unprefixed. `C(n)` is implemented. | **112** chunks from 11 files (98 section / 4 sheet / 10 window). Length-adaptive band unused on this short pack. [Part I](https://www.linkedin.com/pulse/structure-first-adaptive-chunking-enterprise-rag-part-vishal-kumar-1yljc/) |
 | Mahindra Research Valley, Chennai | NLP retrieval that extracted root causes from English mechanical-failure writeups | **~60%** average reduction in ORC closing time |
@@ -56,7 +56,7 @@ Shipped for **Mahindra**, **Flexera**, **Dorman**, and **Corning**. Intern → A
 
 | Role | Where | When | One-liner |
 | --- | --- | --- | --- |
-| <img src="assets/live-dot.gif" width="13" height="13" alt="live" /> AI Engineer and Creator <img src="assets/present-badge.gif" height="16" alt="doing at present" /> | [Manaswi](https://manaswi.fly.dev/) · [ClinAssistIndia](https://clinassitindia.org/) | Apr 2026 – Present | Independent product work: Sarvam-105B co-learner and ICMR-grounded PHC workspace |
+| <img src="assets/live-dot.gif" width="13" height="13" alt="live" /> AI Engineer and Creator <img src="assets/present-badge.gif" height="16" alt="doing at present" /> | [Manaswi](https://manaswi.fly.dev/) · [ClinAssistIndia](https://clinassitindia.org/) | Apr 2026 – Present | Independent product work: Intelligent co-learner and clinical assistant  |
 | AI Engineer | [justuju.in](https://justuju.in) | Jan 2025 – Mar 2026 | AI consultant and SME; EvalAI for ed-tech assessments |
 | Career break | — | Oct 2023 – Oct 2024 | Family and travel; ICPC India AI plagiarism-checker POC |
 | Data Scientist | Bristlecone | Jan 2020 – Oct 2023 | Intern → Associate DS → DS; NLP, CV, and forecasting for Mahindra, Flexera, Dorman, Corning |
